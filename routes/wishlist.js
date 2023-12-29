@@ -1,5 +1,5 @@
 const Router = require("express").Router();
-const wishlistSchema = require("../models/wishlist");
+const wishlistSchema = require("../models/Wishlist");
 const jwt = require("jsonwebtoken");
 const cryptoJS = require("crypto-js");
 const verifyToken = require("../utils/auth");
