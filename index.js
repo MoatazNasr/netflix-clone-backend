@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 dotenv.config();
 const userRoutes = require("./routes/user");
 const wishlistRoutes = require("./routes/wishlist");
+const PORT = process.env.PORT || 2000;
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -20,6 +21,6 @@ mongoose
   app.use('/api/users' ,userRoutes);
   app.use('/api/wishlists' ,wishlistRoutes);
   
-  app.listen("2000", () => {
+  app.listen(PORT, () => {
   console.log("listen at port 2000");
 });
